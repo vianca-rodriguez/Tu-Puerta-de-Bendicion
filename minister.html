@@ -45,11 +45,12 @@
                 <p>Un espacio para jóvenes entre 13 y 35 años</p>
                 <button class="btn-modal"
                     data-title="Ministerio de Jóvenes"
-                    data-info="Nos reunimos el segundo viernes del mes a las 7PM y domingos a las 9:30AM."
-                    data-leader="Marialis Nieves"
+                    data-info="Organizamos actividades especiales como campamentos, retiros y eventos sociales para fortalecer nuestra comunidad."
+                    data-horario="Segundo viernes del mes a las 7PM y los domingos a las 9:30AM"
+                    data-leader="Marialis Nieves (Presidenta)"
                     data-phone="+17871234567"
                     data-image="assets/Ministerios/juventud.JPG"
-                    data-gallery="assets/Ministerios/juventud.JPG,assets/Ministerios/minihero.JPG"
+                    data-gallery-link="https://www.instagram.com/ajecnorestepr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 >
                     Más Información
                 </button>
@@ -62,9 +63,19 @@
             <div class="text">
                 <h2>Ministerio de Niños</h2>
                 <p>Un espacio seguro y divertido para niños de 3 a 12 años</p>
-                <button class="btn-primary">Más Información</button>
+                <button class="btn-modal"
+                    data-title="Ministerio de Niños"
+                    data-info="Brindamos un ambiente seguro, divertido y lleno de fe para que los niños crezcan en su relación con Dios a través de juegos, enseñanzas y actividades creativas."
+                    data-horario="Último jueves del mes a las 7PM y domingos a las 9:30AM"
+                    data-leader="Laiza Castro (Capitana)"
+                    data-phone="+17877106905"
+                    data-image="assets/Ministerios/ninos.JPG"
+                    data-gallery-link=""
+                >
+                    Más Información
+                </button>
             </div>
-            <img src="assets/Ministerios/ninos.JPG" alt="">
+            <img src="assets/Ministerios/ninos.JPG" alt="Ministerio de Niños">
         </div>
 
         <!-- ROW 3 -->
@@ -72,29 +83,60 @@
             <div class="text">
                 <h2>Ministerio de Damas</h2>
                 <p>Un ministerio dedicado a las mujeres de la iglesia</p>
-                <button class="btn-primary">Más Información</button>
+                <button class="btn-modal"
+                    data-title="Ministerio de Damas"
+                    data-info="Un espacio de hermandad, crecimiento espiritual y apoyo mutuo para las mujeres de nuestra iglesia. Realizamos reuniones, retiros y actividades especiales a lo largo del año."
+                    data-horario="Tercer jueves del mes a las 7PM y domingos a las 9:30AM"
+                    data-leader="Lourdes López (Presidenta)"
+                    data-phone="+17874353337"
+                    data-image="assets/Ministerios/damas.JPG"
+                    data-gallery-link=""
+                >
+                    Más Información
+                </button>
             </div>
-            <img src="assets/Ministerios/damas.JPG" alt="">
+            <img src="assets/Ministerios/damas.JPG" alt="Ministerio de Damas">
         </div>
 
+        <!-- ROW 4 (reversed) -->
         <div class="ministry-row reverse">
             <div class="text">
                 <h2>Ministerio de Caballeros</h2>
                 <p>Un ministerio dedicado a los hombres de la iglesia</p>
-                <button class="btn-primary">Más Información</button>
+                <button class="btn-modal"
+                    data-title="Ministerio de Caballeros"
+                    data-info="Un ministerio que fortalece a los hombres en su fe, liderazgo y familia. Nos reunimos para crecer juntos en la Palabra y apoyarnos como comunidad."
+                    data-horario="Primer jueves del mes a las 7PM y domingos a las 9:30AM"
+                    data-leader="Cruz Nieves (Presidente)"
+                    data-phone="+17877691965"
+                    data-image="assets/Ministerios/caballeros.JPG"
+                    data-gallery-link=""
+                >
+                    Más Información
+                </button>
             </div>
-            <img src="assets/Ministerios/caballeros.JPG" alt="">
+            <img src="assets/Ministerios/caballeros.JPG" alt="Ministerio de Caballeros">
         </div>
 
+        <!-- ROW 5 -->
         <div class="ministry-row">
             <div class="text">
                 <h2>AVIVA</h2>
                 <p>Escuela de discipulado para toda la iglesia.</p>
-                <button class="btn-primary">Más Información</button>
+                <button class="btn-modal"
+                    data-title="AVIVA"
+                    data-info="AVIVA es nuestra escuela de discipulado abierta a toda la iglesia. A través de ella crecemos en el conocimiento de la Palabra y nos preparamos para servir con propósito."
+                    data-horario="Martes a las 7PM"
+                    data-leader="Edgar Díaz (Maestro)"
+                    data-phone="+19398910038"
+                    data-image="assets/Home/logoAviva.jpg"
+                    data-gallery-link=""
+                >
+                    Más Información
+                </button>
             </div>
-            <img src="assets/Home/logoAviva.jpg" alt="aviva">
+            <img src="assets/Home/logoAviva.jpg" alt="AVIVA">
         </div>
-
     </section>
 
     
@@ -105,15 +147,26 @@
             <img id="modal-image" class="modal-main-img" src="" alt="">
 
             <h2 id="modal-title"></h2>
-
             <p id="modal-text"></p>
 
             <div class="modal-extra">
-                <p><strong>Líder:</strong> <span id="modal-leader"></span></p>
-                <p><strong>Teléfono:</strong> <span id="modal-phone"></span></p>
+                <div class="modal-detail">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span id="modal-horario"></span>
+                </div>
+                <div class="modal-detail">
+                    <i class="fa-solid fa-user"></i>
+                    <span id="modal-leader"></span>
+                </div>
+                <div class="modal-detail">
+                    <i class="fa-solid fa-phone"></i>
+                    <a id="modal-phone" href=""></a>
+                </div>
             </div>
 
-            <div class="modal-gallery" id="modal-gallery"></div>
+            <a id="modal-gallery-link" href="" target="_blank" class="btn-gallery">
+                <i class="fa-solid fa-images"></i> Ver Galería de Actividades
+            </a>
         </div>
     </div>
     

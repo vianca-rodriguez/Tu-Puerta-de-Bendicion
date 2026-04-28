@@ -47,42 +47,36 @@ function toggleResena() {
 
 
 
-const modal = document.getElementById("modal");
-const title = document.getElementById("modal-title");
-const text = document.getElementById("modal-text");
-const leader = document.getElementById("modal-leader");
-const phone = document.getElementById("modal-phone");
-const image = document.getElementById("modal-image");
-const gallery = document.getElementById("modal-gallery");
+// Modal
+const modal = document.getElementById('modal');
+const closeBtn = document.querySelector('.close');
 
-const close = document.querySelector(".close");
+document.querySelectorAll('.btn-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.getElementById('modal-image').src = btn.dataset.image;
+        document.getElementById('modal-title').textContent = btn.dataset.title;
+        document.getElementById('modal-text').textContent = btn.dataset.info;
+        document.getElementById('modal-horario').textContent = btn.dataset.horario;
+        document.getElementById('modal-leader').textContent = btn.dataset.leader;
 
-document.querySelectorAll(".btn-modal").forEach(btn => {
-    btn.addEventListener("click", () => {
-        title.textContent = btn.dataset.title;
-        text.textContent = btn.dataset.info;
-        leader.textContent = btn.dataset.leader;
-        phone.textContent = btn.dataset.phone;
+        const phone = btn.dataset.phone;
+        const phoneEl = document.getElementById('modal-phone');
+        phoneEl.textContent = phone;
+        phoneEl.href = `tel:${phone}`;
 
-        // Main image
-        image.src = btn.dataset.image;
+        const galleryLink = document.getElementById('modal-gallery-link');
+        if (btn.dataset.galleryLink) {
+            galleryLink.href = btn.dataset.galleryLink;
+            galleryLink.style.display = 'inline-block';
+        } else {
+            galleryLink.style.display = 'none';
+        }
 
-        // Gallery images
-        gallery.innerHTML = ""; // clear previous
-
-        const images = btn.dataset.gallery.split(",");
-        images.forEach(src => {
-            const img = document.createElement("img");
-            img.src = src;
-            gallery.appendChild(img);
-        });
-
-        modal.style.display = "flex";
+        modal.classList.add('active');
     });
 });
 
-close.onclick = () => modal.style.display = "none";
-
-window.onclick = (e) => {
-    if (e.target === modal) modal.style.display = "none";
-};
+closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('active');
+});

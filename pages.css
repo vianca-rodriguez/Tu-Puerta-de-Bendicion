@@ -278,16 +278,39 @@ body.ministries-page .hero-content {
     object-fit: cover;
 }
 
-/* BUTTON (optional tweak to match style) */
-.ministry-row .btn-modal {
-    padding: 0.6em 1.5em;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+.btn-modal {
+    position: relative;
+    padding: 0.7em 1.8em;
+    font-size: 0.85rem;
+    font-family: 'Poppins', sans-serif;
     white-space: nowrap;
-    border-radius: 0;
-    background: transparent;
     color: var(--primary);
-    border: var(--primary) 2px solid;
+    background: transparent;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.btn-modal::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btn-modal:hover::before {
+    transform: scaleX(1);
+}
+
+.btn-modal:hover {
+    color: #fff !important;
 }
 
 /* KEEP layout SAME on all screens */
@@ -353,74 +376,101 @@ body.ministries-page .hero-content {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.6);
-
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
-/* .modal-content {
-    background: #fff;
-    padding: 2rem;
-    max-width: 500px;
-    border-radius: 10px;
-    text-align: center;
-} */
-
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 1.5rem;
-    cursor: pointer;
+.modal.active {
+    display: flex;
 }
 
 .modal-content {
     background: #fff;
     padding: 2rem;
-    max-width: 600px;
+    max-width: 520px;
     width: 90%;
-    border-radius: 12px;
+    border-radius: 16px;
     text-align: center;
     position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
 }
 
-/* MAIN IMAGE */
+.close {
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.close:hover { color: #333; }
+
 .modal-main-img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1rem;
 }
 
-/* TEXT */
-.modal-extra {
-    margin-top: 1rem;
-    text-align: left;
+.modal-content h2 {
+    color: var(--primary);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
 }
 
-.modal-extra p {
-    margin: 0.3rem 0;
+.modal-content p {
+    color: #555;
     font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
-/* GALLERY */
-.modal-gallery {
+.modal-extra {
+    text-align: left;
+    background: #f7f8fa;
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
     display: flex;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
-.modal-gallery img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: transform 0.2s;
+.modal-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 0.9rem;
+    color: #333;
 }
 
-.modal-gallery img:hover {
-    transform: scale(1.05);
+.modal-detail i {
+    color: var(--primary);
+    width: 16px;
+}
+
+.modal-detail a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.btn-gallery {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7em 1.8em;
+    background: var(--primary);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.3s;
+}
+
+.btn-gallery:hover {
+    background: var(--secondary);
 }
