@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="IDPMI Palmer, Rio Grande - Tu Puerta de Bendición.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDPMI Palmer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+    <script src="https://kit.fontawesome.com/c0b04a1905.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="ministries-page">
+    <nav class="nav">
+        <a href="index.html" class="logo-text">
+            <img src="assets/logo.png" alt="Logo IDPMI Palmer" width="55">
+        </a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="about.html">SOBRE NOSOTROS</a></li>
+            <li><a href="minister.html">MINISTERIOS</a></li>
+            <li><a href="contact.html">CONTACTO</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="main-hero">
+        <div class="hero-content">
+            <h1>Ministerios</h1>
+            <p>Conoce nuestros ministerios y cómo puedes participar en ellos.</p>
+        </div>
+    </header>
+    
+    <section class="ministries">
+
+        <!-- ROW 1 -->
+        <div class="ministry-row">
+            <div class="text">
+                <h2>Ministerio de Jóvenes</h2>
+                <p>Un espacio para jóvenes entre 13 y 35 años</p>
+                <button class="btn-modal"
+                    data-title="Ministerio de Jóvenes"
+                    data-info="Nos reunimos el segundo viernes del mes a las 7PM y domingos a las 9:30AM."
+                    data-leader="Marialis Nieves"
+                    data-phone="+17871234567"
+                    data-image="assets/Ministerios/juventud.JPG"
+                    data-gallery="assets/Ministerios/juventud.JPG,assets/Ministerios/minihero.JPG"
+                >
+                    Más Información
+                </button>
+            </div>
+            <img src="assets/Ministerios/juventud.JPG" alt="">
+        </div>
+
+        <!-- ROW 2 (reversed) -->
+        <div class="ministry-row reverse">
+            <div class="text">
+                <h2>Ministerio de Niños</h2>
+                <p>Un espacio seguro y divertido para niños de 3 a 12 años</p>
+                <button class="btn-primary">Más Información</button>
+            </div>
+            <img src="assets/Ministerios/ninos.JPG" alt="">
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="ministry-row">
+            <div class="text">
+                <h2>Ministerio de Damas</h2>
+                <p>Un ministerio dedicado a las mujeres de la iglesia</p>
+                <button class="btn-primary">Más Información</button>
+            </div>
+            <img src="assets/Ministerios/damas.JPG" alt="">
+        </div>
+
+        <div class="ministry-row reverse">
+            <div class="text">
+                <h2>Ministerio de Caballeros</h2>
+                <p>Un ministerio dedicado a los hombres de la iglesia</p>
+                <button class="btn-primary">Más Información</button>
+            </div>
+            <img src="assets/Ministerios/caballeros.JPG" alt="">
+        </div>
+
+        <div class="ministry-row">
+            <div class="text">
+                <h2>AVIVA</h2>
+                <p>Escuela de discipulado para toda la iglesia.</p>
+                <button class="btn-primary">Más Información</button>
+            </div>
+            <img src="assets/Home/logoAviva.jpg" alt="aviva">
+        </div>
+
+    </section>
+
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <img id="modal-image" class="modal-main-img" src="" alt="">
+
+            <h2 id="modal-title"></h2>
+
+            <p id="modal-text"></p>
+
+            <div class="modal-extra">
+                <p><strong>Líder:</strong> <span id="modal-leader"></span></p>
+                <p><strong>Teléfono:</strong> <span id="modal-phone"></span></p>
+            </div>
+
+            <div class="modal-gallery" id="modal-gallery"></div>
+        </div>
+    </div>
+    
+   <footer class="footer" id="footer">
+        <section class="contact">
+            <h4><i class="fa-solid fa-envelope"></i>Contacto</h4>
+            <div class="contact-info">
+                <a href="tel:+17878884933">+1 (787) 888-4933</a><br>
+                <a href="mailto:palmeriddpmi@outlook.com">palmeriddpmi@outlook.com</a>
+            </div>
+
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/IDPMIPALMER" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/palmeridpmi" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@idpmipalmer" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://youtube.com/@idpmipalmer-hc9hw" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+
+            <h4><i class="fa-solid fa-location-dot"></i>Ubicación</h4>
+            <p>Carr. núm. 3 Km 29.0 Bo. Palmer, Rio Grande, Puerto Rico</p>
+        </section>
+
+        <p class="rights">&copy; 2026 IDPMI Palmer, Rio Grande.</p>
+
+        <p class="developer">Desarrollado por <a href="#">Vianca</a>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

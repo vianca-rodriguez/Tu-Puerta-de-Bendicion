@@ -1,0 +1,475 @@
+:root {
+    --primary: black;
+    --third: #19559A;
+    --secondary: #E81E27;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------------- NAV ---------------- */
+/* ---------------- STICKY NAV ---------------- */
+.nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background: var(--primary);
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+/* Opcional: cambiar color al hacer scroll */
+body.scrolled .nav {
+    background: #11325a; /* Más oscuro cuando se hace scroll */
+}
+
+
+.logo-text {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+/* Desktop nav */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    justify-content: center;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Transform to X when open */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 900px) {
+
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .logo-text {
+        display: block;
+        z-index: 1002;
+    }
+
+    /* hide desktop nav links */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary);
+        flex-direction: column;
+        padding-top: 6rem;
+        align-items: center;
+        justify-content: flex-start;
+        display: none;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .nav-links a:hover {
+        color: var(--secondary);
+    }
+
+}
+
+/* Desktop: hide logo, show nav centered */
+@media (min-width: 901px) {
+    .logo-text {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    .nav {
+        justify-content: center;
+    }
+}
+
+/* ---------------- HERO ---------------- */
+.main-hero {
+    min-height: 60vh; /* reduced from 85vh */
+    max-height: 650px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("assets/home/cultoMano.JPG");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    letter-spacing: 0.18em;
+    margin-bottom: 0.6em;
+    text-shadow: 0 6px 25px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+    opacity: 0.9;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: white;
+    padding: 0.8em 2.5em;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #c4171f;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+
+/* ---------------- ABOUT ---------------- */
+.main-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background: #f7f8fa;
+    gap: 2rem;
+}
+
+.about-content {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.btn-secondary {
+    background: var(--primary);
+    color: white;
+    padding: 0.7em 2em;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #11325a;
+    transform: translateY(-2px) scale(1.03);
+}
+
+
+/* ---------------- WHAT WE BELIEVE ---------------- */
+.creemos ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* softer spacing */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.creemos li {
+    display: flex;
+    flex: 1; /* 👈 each takes equal space */
+    flex-direction: column; /* 👈 icon on top */
+    align-items: center;
+    text-align: center;
+    gap: 0.4rem;
+
+    background: none;       /* 👈 removes background */
+    box-shadow: none;       /* 👈 removes shadow */
+    padding: 0;
+
+    font-size: 1.2rem; /* increase text size */
+}
+.creemos li i {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+.creemos h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* ---------------- SCHEDULE ---------------- */
+.horario{
+    padding-bottom: 2rem;
+    /* background: black; */
+}
+
+.horario h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.service {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #fff;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Background image */
+.service img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.6s ease;
+}
+
+/* Stronger, more cinematic gradient */
+.service::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.65) 40%,
+        rgba(0,0,0,0.85) 100%
+    );
+    z-index: 1;
+}
+
+/* Wrap text for better control */
+.service-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Title */
+.service h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Text */
+.service p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Hover */
+.service:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.service:hover img {
+    transform: scale(1.08);
+}
+
+
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    .main-about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .schedule {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%;
+    }
+
+    .creemos {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    background: var(--primary);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.contact h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact p, .contact-info {
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.contact a {
+    color: white;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: var(--secondary);
+}
+
+.fa-solid {
+    margin-right: 0.5rem;
+}
+
+.social-icons {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.rights {
+    font-size: 0.75rem;
+}
+
+.developer {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+}
+

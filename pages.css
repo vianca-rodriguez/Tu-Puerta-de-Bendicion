@@ -1,0 +1,426 @@
+/* ---------------- ABOUT PAGE ---------------- */
+body.about-page {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* -------- HERO SECTION -------- */
+body.about-page .main-hero {
+    position: relative;
+
+    background: url('assets/About/lideres.JPG') center/cover no-repeat;
+    height: 60vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Overlay */
+body.about-page .main-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.75)
+    );
+    z-index: 1;
+}
+
+body.about-page .main-hero .hero-content {
+    text-align: center;
+    max-width: 90%;
+    position: relative;
+    z-index: 2;
+}
+
+body.about-page .main-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+body.about-page .main-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+body.about-page .main-hero a.btn-primary {
+    padding: 0.8em 2em;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+/* -------- PASTORES SECTION -------- */
+body.about-page .pastores h2 {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+body.about-page .pastores {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+body.about-page .pastor-card {
+    display: inline-block;
+    max-width: 320px;
+    margin: 1.5rem;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+body.about-page .pastor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+body.about-page .pastor-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Names */
+body.about-page .pastor-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.4rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Mensaje BELOW the card */
+body.about-page .pastores > p {
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+/* -------- MISIÓN & VISIÓN SECTION -------- */
+/* Misión & Visión enhancement */
+body.about-page .mision-vision .mision,
+body.about-page .mision-vision .vision {
+    flex: 1 1 300px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    margin: .2rem 2rem 2rem 2rem;
+}
+
+body.about-page .mision-vision .mision::before,
+body.about-page .mision-vision .vision::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 20px 0 0 20px;
+}
+
+body.about-page .mision-vision h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+body.about-page .mision-vision p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* -------- RESEÑA SECTION -------- */
+body.about-page .reseña-section {
+    background: #f7f8fa; /* same as homepage */
+    padding: 4rem 2rem;
+    max-width: 100%;
+}
+
+body.about-page .reseña-section h3.reseña-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary);
+}
+body.about-page .highlight {
+    color: var(--third); /* your red */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+body.about-page .reseña-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+}
+
+body.about-page .reseña-section .read-more-toggle {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--secondary);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+body.about-page .reseña-section .reseña-full {
+    display: none;
+    margin-top: 1rem;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 900px) {
+    body.about-page .mision-vision {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    body.about-page .pastor-card {
+        margin: 1rem auto;
+    }
+}
+
+
+
+/* ---------------- Ministries PAGE ---------------- */
+body.ministries-page {
+    font-family: 'Poppins', sans-serif;
+}
+/* -------- HERO SECTION -------- */
+body.ministries-page .main-hero {
+    position: relative;
+    height: 55vh;
+
+    background: url("assets/Ministerios/minihero.JPG") center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+body.ministries-page .main-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.75)
+    );
+}
+
+body.ministries-page .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+/* -------- Ministries SECTION -------- */
+/* SECTION BACKGROUND */
+.ministries {
+    background: #f4f4f4;
+    padding: 4rem 2rem;
+}
+
+/* ROW LAYOUT */
+.ministry-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem; /* smaller internal spacing */
+
+    max-width: 1100px; /* gives more breathing room */
+    padding: 0 2rem;   /* 👈 THIS is what pushes content away from edges */
+
+    margin: 0 auto 4rem;
+}
+
+/* REVERSE ROW */
+.ministry-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* TEXT SIDE */
+.ministry-row .text {
+    flex: 1;
+}
+
+.ministry-row h2 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.ministry-row p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* IMAGE SIDE */
+.ministry-row img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* BUTTON (optional tweak to match style) */
+.ministry-row .btn-modal {
+    padding: 0.6em 1.5em;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    border-radius: 0;
+    background: transparent;
+    color: var(--primary);
+    border: var(--primary) 2px solid;
+}
+
+/* KEEP layout SAME on all screens */
+.ministry-row,
+.ministry-row.reverse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+
+}
+
+/* TEXT */
+.ministry-row .text {
+    flex: 1;
+}
+
+/* IMAGE */
+.ministry-row img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.ministry-row .text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 👈 key */
+    gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+
+    .ministry-row,
+    .ministry-row.reverse {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .ministry-row h2 {
+        font-size: 1.3rem;
+    }
+
+    .ministry-row p {
+        font-size: 0.85rem;
+    }
+
+    .ministry-row img {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* .modal-content {
+    background: #fff;
+    padding: 2rem;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+} */
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+/* MAIN IMAGE */
+.modal-main-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* TEXT */
+.modal-extra {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.modal-extra p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+/* GALLERY */
+.modal-gallery {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.modal-gallery img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.05);
+}
