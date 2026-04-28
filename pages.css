@@ -474,3 +474,289 @@ body.ministries-page .hero-content {
 .btn-gallery:hover {
     background: var(--secondary);
 }
+
+
+/* ---------------- CONTACT PAGE ---------------- */
+body.contact-page {
+    font-family: 'Poppins', sans-serif;
+}
+
+body.contact-page .main-hero {
+    position: relative;
+    height: 50vh;
+    background: url('assets/Home/cultoEspalda.JPG') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+body.contact-page .main-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+    z-index: 1;
+}
+
+body.contact-page .main-hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+body.contact-page .main-hero h1 { font-size: 3rem; }
+body.contact-page .main-hero p  { font-size: 1.2rem; }
+
+/* INFO CARDS */
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+    background: #f7f8fa;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    transition: transform 0.3s;
+}
+
+.contact-card:hover { transform: translateY(-5px); }
+
+.contact-card i {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.contact-card h3 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-bottom: 0.4rem;
+}
+
+.contact-card p,
+.contact-card a {
+    font-size: 0.85rem;
+    color: #555;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* FORM + MAP */
+.contact-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 4rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-form-wrap,
+.map-wrap {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form-wrap h2,
+.map-wrap h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.contact-form-wrap p,
+.map-wrap p {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    transition: border 0.3s;
+    outline: none;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.85em;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+}
+
+.btn-submit:hover { background: var(--secondary); }
+
+.form-note {
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 0.8rem;
+    color: green;
+}
+
+/* SOCIAL */
+.contact-social {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #f7f8fa;
+}
+
+.contact-social h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.social-icons-large {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-icons-large a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons-large a:hover {
+    transform: translateY(-4px);
+    color: var(--secondary);
+}
+
+.social-icons-large i { font-size: 2rem; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-main { padding: 2rem 1.5rem; }
+    body.contact-page .main-hero h1 { font-size: 2rem; }
+}
+
+/* SCHEDULE */
+.schedule-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #fff;
+}
+
+.schedule-section h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.4rem;
+}
+
+.schedule-section > p {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.schedule-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.schedule-images img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.schedule-images img:hover {
+    transform: scale(1.02);
+}
+
+/* DONATIONS */
+.donate-section {
+    padding: 4rem 2rem;
+    background: #f7f8fa;
+    text-align: center;
+}
+
+.donate-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.donate-content i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.donate-content h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.donate-content p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .schedule-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .schedule-images img {
+        max-width: 100%;
+    }
+}

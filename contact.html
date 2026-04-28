@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="description" content="IDPMI Palmer, Rio Grande - Tu Puerta de Bendición.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDPMI Palmer</title>
+    <title>IDPMI Palmer - Contacto</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
     <script src="https://kit.fontawesome.com/c0b04a1905.js" crossorigin="anonymous"></script>
 </head>
+<body class="contact-page">
 
-<body>
     <nav class="nav">
         <a href="index.html" class="logo-text">
             <img src="assets/logo.png" alt="Logo IDPMI Palmer" width="55">
@@ -20,7 +21,6 @@
             <li><a href="minister.html">MINISTERIOS</a></li>
             <li><a href="contact.html">CONTACTO</a></li>
         </ul>
-
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -28,40 +28,125 @@
         </div>
     </nav>
 
+    <!-- HERO -->
+    <header class="main-hero">
+        <div class="hero-content">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para servirte.</p>
+            <a href="tel:+17878884933" class="btn-primary">Llámanos</a>
+        </div>
+    </header>
 
+    <!-- CONTACT FORM + MAP -->
+    <section class="contact-main">
 
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+            <h2>Envíanos un mensaje</h2>
+            <p>Responderemos a la brevedad posible.</p>
+
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" placeholder="Tu nombre completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" placeholder="tucorreo@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Asunto</label>
+                    <input type="text" id="subject" placeholder="¿En qué podemos ayudarte?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                <button class="btn-submit" onclick="sendEmail()">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                </button>
+                <p class="form-note" id="form-note"></p>
+            </div>
+        </div>
+
+        <!-- MAP -->
+        <div class="map-wrap">
+            <h2>Encuéntranos</h2>
+            <p>Bo. Palmer, Rio Grande, Puerto Rico</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.4083841898714!2d-65.78401420000002!3d18.374255599999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c049ec28606998f%3A0x6763111c4f9613be!2sIglesia%20De%20Dios%20Pentecostal%20M.I.%20Palmer!5e0!3m2!1sen!2spr!4v1777400158497!5m2!1sen!2spr" 
+                width="100%" 
+                height="380" 
+                style="border:0; border-radius: 12px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </section>
+
+    <!-- DONATIONS -->
+    <section class="donate-section">
+        <div class="donate-content">
+            <i class="fa-solid fa-heart"></i>
+            <h2>Diezmos y Ofrendas</h2>
+            <p>Tu ofrenda nos ayuda a seguir sirviendo a la comunidad.<br>Puedes dar en línea de forma segura a través de PayPal.</p>
+            <!-- PASTE YOUR PAYPAL BUTTON CODE HERE -->
+        </div>
+    </section>
+
+    <!-- SOCIAL -->
+    <section class="contact-social">
+        <h2>Síguenos en redes sociales</h2>
+        <div class="social-icons-large">
+            <a href="https://www.facebook.com/IDPMIPALMER" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-facebook"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/palmeridpmi" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@idpmipalmer" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-tiktok"></i>
+                <span>TikTok</span>
+            </a>
+            <a href="https://youtube.com/@idpmipalmer-hc9hw" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="schedule-section">
+        <h2>Programa del Mes</h2>
+        <p>Sujeto a cambios</p>
+        <div class="schedule-images">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczMmQVwRMBkJwjf4MJ4Cyt3Qf3no1-nT-fpKcTxnvT6ioYuhCtf6AyoDiFYN7e85uo3g_L1B1znzqvTvnm9icLFdWKOV6yBHEFGONejNZNK6xPi2UU25o7YLA6WZ_olV34gX7vForaQlIOxciJvCuNDWLIopJE8aMacYo7oQt6ULioMEECZICbCahgJyJq5p5lbS03tt1wljWDIbxxpxfCNxreFDH3c_hdzGXG-0P_kT7-wpnXGrl6xRgLWM2SlQLx3rkEVKzTqvA9YzPhzQ5N2ppYXSSnpm4hvKPn56-3PyGkHoVeO5CCY5zt1VhwhLQ-EKDDw5UTOF6OuvZVBOynqILK_9bgEaWCN1rXvhYLsKNbHfu9qb6Kd2tjkvGHrjA-ELBHq0D-aiRuV93dkHU1CzuTnlMYyeqI54L1M8wqvhnVk2x_NNpGAGYFLZ9xHMAq7gp9EDQ3_BBWS9I5_n-RO9zeitq1AfOCAJvmxPhP_hPxvOFu_OzuWzE3jCT39NIf7a98_w8VEjO9hG4v8RXPrHes170c3JbKJg0y7L12KIaS0Fwbr_vixo3hKwDzddbX0a8pyTMQ9JerGGECIr5ge4Qchlgptx8tBZBIGxB3qcyO2OFz2lMGk2WzKM8j-ptNjUCkhgs8J_Lroe3SDfKOB-zEKs1aEbN5mAQZPKAe37TWiCiJhB7xQsGV-c9IwwyL6NLYpUkxcu7_YJlaIJa_QXXunDmrWcFq7Uze5mkdECOWR1eyPWiYy1Medmd3GFPWaK6gFH620t-2tU10A1_zH6jb52YWlWAtoIi_Z_ewnIlr7aXV_GHWKdXZgWW8m5tkeHRdWnpwDBHm9jDiZ8ABLGNY4knHQ1nMjx3KDBzX-qhZ-itS8M7Q7FEyKdf60Q9dc6BfODgJI8oOj0rkFJluDb76iOqr64t85GgJg9kADuKOzs9PpUjWpzm5wp6dEZ3-5QkdogchNmyGVMFdk_JyBi=w1650-h1275-s-no" alt="Horario parte 1">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczOWwJB7tL04TtVnIsfdVExXjmOd0tffNK35GSAdbhXWuUC8eseW5F59d45r3jg6YqgA3Exx6OMxxtWMf1kqR4ozGhugTldlZAM_WTb2yKV4g97QrDx9e2Z9Y20a-EkhCiYkop4o3QBUtvJUO43UBnoyCAKtu3EwCICa8bZMaIJkN22Bb0n_tF1Hl6Q4SDGTariQEUhYHgAP_ObgNbkRQZl-MUObabsp30uLT_4Qfl7l6_7-YqAUTMFL5yJJRXl2p3ueI7vTMF7zK13-e6xxdB2XQCSSFmUOnMQRvGYPwaOeiSAEHjBckgEDP2tDHNyE3TJ1q5RoFoDkC8zWRDHPsreehOFZgtRuy_4jHcZ-3QOe9GTYUTINKgStV7A6E_D2NNM1Mo5aoflU-R2uJKjZTjrMxkT_FHXIiZkUjgf_PVn0MNXQJGCW8icrcaNLgBnYNNFiNKbBpy5DQVWX_0Oton1ArxSIxrUSAIZ7-ksR2vNct19Wjlm57D8VAkXldFrVEvwgNkWnA7uHDD5N-yvvfCpPN92oE6JkOVdhbP5KOad1jwCbVC6WaSRadywCsGoXcw3AlEFJWzfMNTJiWP-5gUnGHVlMu-Mq_la_1qOhiqPK5TvAelCEMv3Ss2pJ8zhmEOuFWX2xShcnCY4nHMD6VPgvs4W7_zISRalqc0okOjaFuSoyW9qXYDplGVc8_RS73KU48oM4TC5qtvLJ0LL4jDgyeWiZlMpjQjR2pziHJWgyCsjIQFeM_KdPJVSHzRqq8dhgLGBS3ES0uzCsKbBlGxu4_iB6qqPPQzGI9isqhzdDPTmwp5MTfObgwlLJ9RqQz-kfvXApVi_QrBjfCfobDmxWV8R-FyrDwR9CP-xD7Zqp5R4hJt_CJVSKupDmf-3zgCi7UPZNPUBwkwA8Kd82EoKb_xfVfHId_A8BpFfHs-XQpmNwa250xyQrtHtD-sffBvfttTJsdmWRJnVx-RFZEyxe=w1650-h1275-s-no" alt="Horario parte 2">
+        </div>
+    </section>
 
     <footer class="footer" id="footer">
         <section class="contact">
-            <h4><i class="fa-solid fa-envelope"></i>Contacto</h4>
+            <h4><i class="fa-solid fa-envelope"></i> Contacto</h4>
             <div class="contact-info">
                 <a href="tel:+17878884933">+1 (787) 888-4933</a><br>
                 <a href="mailto:palmeriddpmi@outlook.com">palmeriddpmi@outlook.com</a>
             </div>
-
             <h4>Síguenos</h4>
             <div class="social-icons">
-                <a href="https://www.facebook.com/IDPMIPALMER" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/palmeridpmi" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-square-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@idpmipalmer" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-                <a href="https://youtube.com/@idpmipalmer-hc9hw" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+                <a href="https://www.facebook.com/IDPMIPALMER" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/palmeridpmi" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.tiktok.com/@idpmipalmer" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://youtube.com/@idpmipalmer-hc9hw" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </div>
-
-            <h4><i class="fa-solid fa-location-dot"></i>Ubicación</h4>
+            <h4><i class="fa-solid fa-location-dot"></i> Ubicación</h4>
             <p>Carr. núm. 3 Km 29.0 Bo. Palmer, Rio Grande, Puerto Rico</p>
         </section>
-
         <p class="rights">&copy; 2026 IDPMI Palmer, Rio Grande.</p>
-
-        <p class="developer">Desarrollado por <a href="#">Vianca</a>
+        <p class="developer">Desarrollado por <a href="#">Vianca</a></p>
     </footer>
 
     <script src="script.js"></script>

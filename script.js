@@ -80,3 +80,25 @@ closeBtn.addEventListener('click', () => modal.classList.remove('active'));
 modal.addEventListener('click', (e) => {
     if (e.target === modal) modal.classList.remove('active');
 });
+
+
+
+function sendEmail() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const note = document.getElementById('form-note');
+
+    if (!name || !email || !message) {
+        note.style.color = 'red';
+        note.textContent = 'Por favor completa todos los campos.';
+        return;
+    }
+
+    const mailto = `mailto:palmeriddpmi@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Nombre: ' + name + '\nCorreo: ' + email + '\n\n' + message)}`;
+    window.location.href = mailto;
+
+    note.style.color = 'green';
+    note.textContent = '¡Mensaje listo! Se abrirá tu correo.';
+}
