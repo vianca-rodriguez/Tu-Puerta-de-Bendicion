@@ -473,3 +473,7 @@ body.scrolled .nav {
     margin-top: 1rem;
 }
 
+.developer a {
+    color: var(--third);
+    text-decoration: underline;
+}
