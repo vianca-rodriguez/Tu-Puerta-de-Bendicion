@@ -768,35 +768,56 @@ body.courses-page {
     font-family: 'Poppins', sans-serif;
 }
 
-body.courses-page .main-hero {
-    position: relative;
-    height: 50vh;
-    background: url('assets/Home/logoAviva.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
+body.courses-page {
+    --aviva-red: #ab0707; /* cámbialo por el rojo exacto de la foto, ej. #c1121f */
 }
 
-body.courses-page .main-hero::before {
+/* HERO */
+body.courses-page .courses-hero {
+    position: relative;
+    background: var(--aviva-red);
+    line-height: 0;
+}
+
+body.courses-page .courses-hero img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Overlay igual al de las otras páginas, sobre toda la franja */
+body.courses-page .courses-hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75));
-    z-index: 1;
-}
-
-body.courses-page .main-hero .hero-content {
-    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
     z-index: 2;
+    pointer-events: none;
 }
 
-body.courses-page .main-hero h1 { font-size: 3rem; }
-body.courses-page .main-hero p  { font-size: 1.2rem; }
+/* PÁRRAFO */
+body.courses-page .courses-intro {
+    background: #f7f8fa;
+    margin: 0;
+    padding: 2.5rem 1.5rem 0;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--primary);
+}
 
-@media (max-width: 768px) {
-    body.courses-page .main-hero h1 { font-size: 2rem; }
+body.courses-page .courses-intro::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 0 auto 1.2rem;
+    background: var(--third);
+    border-radius: 4px;
 }
 
 /* ---------------- COURSES SECTION ---------------- */
