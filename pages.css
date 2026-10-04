@@ -771,7 +771,7 @@ body.courses-page {
 body.courses-page .main-hero {
     position: relative;
     height: 50vh;
-    background: url('assets/Home/logoAviva.JPG') center/cover no-repeat;
+    background: url('assets/Home/logoAviva.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
