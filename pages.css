@@ -749,6 +749,28 @@ body.contact-page .main-hero p  { font-size: 1.2rem; }
     margin-bottom: 1.5rem;
 }
 
+.qr-card {
+    display: inline-block;
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.qr-card img {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 0.8rem;
+}
+
+.qr-card span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
     .schedule-images {
@@ -759,4 +781,180 @@ body.contact-page .main-hero p  { font-size: 1.2rem; }
     .schedule-images img {
         max-width: 100%;
     }
+}
+
+
+/* ---------------- COURSES PAGE ---------------- */
+body.courses-page {
+    font-family: 'Poppins', sans-serif;
+}
+
+body.courses-page .main-hero {
+    position: relative;
+    height: 50vh;
+    background: url('assets/Home/LogoAviva.JPG') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+body.courses-page .main-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75));
+    z-index: 1;
+}
+
+body.courses-page .main-hero .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+body.courses-page .main-hero h1 { font-size: 3rem; }
+body.courses-page .main-hero p  { font-size: 1.2rem; }
+
+@media (max-width: 768px) {
+    body.courses-page .main-hero h1 { font-size: 2rem; }
+}
+
+/* ---------------- COURSES SECTION ---------------- */
+.courses {
+    background: #f7f8fa;
+    padding: 4rem 2rem;
+}
+
+.course {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.course h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.course h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--third);
+    border-radius: 4px;
+    margin: 0.8rem auto 0;
+}
+
+.course-desc {
+    max-width: 650px;
+    margin: 1.5rem auto 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.course-verse {
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-style: italic;
+    color: var(--primary);
+    border-left: 4px solid var(--third);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.course-verse cite {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--third);
+}
+
+/* WEEK CARDS */
+.weeks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+}
+
+.week {
+    background: #fff;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.week:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+.week h3 {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.3em 1em;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.video-wrap {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+.video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
+.btn-pdf {
+    margin-top: auto;
+    align-self: stretch;
+    text-align: center;
+    padding: 0.8em 1.8em;
+    border-radius: 50px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background 0.3s;
+}
+
+.btn-pdf:hover {
+    background: var(--secondary);
+}
+
+.btn-pdf i {
+    margin-right: 0.4rem;
+}
+
+@media (max-width: 600px) {
+    .courses { padding: 3rem 1rem; }
+    .course h2 { font-size: 1.5rem; }
+    .weeks { grid-template-columns: 1fr; }
 }
