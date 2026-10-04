@@ -749,27 +749,6 @@ body.contact-page .main-hero p  { font-size: 1.2rem; }
     margin-bottom: 1.5rem;
 }
 
-.qr-card {
-    display: inline-block;
-    background: #fff;
-    padding: 1.2rem;
-    border-radius: 18px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-.qr-card img {
-    display: block;
-    width: 220px;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto 0.8rem;
-}
-
-.qr-card span {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--primary);
-}
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
@@ -792,7 +771,7 @@ body.courses-page {
 body.courses-page .main-hero {
     position: relative;
     height: 50vh;
-    background: url('assets/Home/LogoAviva.JPG') center/cover no-repeat;
+    background: url('assets/Home/logoAviva.JPG') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
